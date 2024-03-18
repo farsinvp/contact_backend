@@ -1,0 +1,106 @@
+<div class="dashboard p-3 w-100 mt-5">
+
+
+
+    <div class="title">
+        <h1> Add New Contact</h1>
+    </div>
+
+    <div class="details mt-5 shadow boder rounded p-3">
+
+
+        <form #addUserform="ngForm" >
+
+            <div class="form-floating mb-3">
+                <input type="text" #id="ngModel" [(ngModel)]="user.id" name="id" class="form-control" id="floatingInputId" placeholder="User Id" pattern="[0-9]*" required>
+                <label for="floatingInputId">User Id</label>
+              </div>
+
+              <div *ngIf="id.invalid&&id.touched" class="mb-3 text-danger">invalid Id</div>
+
+
+
+
+
+
+              <div class="form-floating mb-3">
+                <input type="text" #name="ngModel" [(ngModel)]="user.name" name="name" class="form-control" id="floatingUsername" placeholder="User Name" pattern="[a-zA-Z ]*" required>
+                <label for="floatingUsername">Name</label>
+              </div>
+
+              <div *ngIf="name.invalid&&name.touched" class="mb-3 text-danger">invalid Name</div>
+
+
+              
+
+              <div class="form-floating mb-3">
+                <input type="email" #email="ngModel" [(ngModel)]="user.email" name="email" class="form-control" id="floatingemail" placeholder="email" email required>
+                <label for="floatingemail">Email</label>
+              </div>
+
+              <div *ngIf="email.invalid&&email.touched" class="mb-3 text-danger">invalid email</div>
+
+
+
+
+              <div class="form-floating mb-3">
+                <input type="text" #mobile="ngModel" [(ngModel)]="user.mobile" name="mobile" class="form-control" id="floatingmobile" placeholder="mobile" pattern="" required>
+                <label for="floatingmobile">mobile</label>
+              </div>
+
+              <div *ngIf="mobile.invalid&&mobile.touched" class="mb-3 text-danger">invalid mobile</div>
+
+
+              <div class="form-floating mb-3">
+                <input type="text" #company="ngModel" [(ngModel)]="user.company" name="company" class="form-control" id="floatingcompany" placeholder="company" pattern="" required>
+                <label for="floatingcompany">company</label>
+              </div>
+
+              <div *ngIf="company.invalid&&company.touched" class="mb-3 text-danger">fill company</div>
+
+
+
+              <div class="form-floating mb-3">
+                <input type="text" #title="ngModel" [(ngModel)]="user.title" name="title" class="form-control" id="floatingtitle" placeholder="title" pattern="" required>
+                <label for="floatingtitle">title</label>
+              </div>
+
+              <div *ngIf="title.invalid&&title.touched" class="mb-3 text-danger">fill title</div>
+
+
+              <div class="form-floating mb-3">
+                <input type="text" #photo="ngModel" [(ngModel)]="user.photo" name="photo" class="form-control" id="floatingimg" placeholder="title" pattern="" required>
+                <label for="floatingimg">photo</label>
+              </div>
+
+
+
+              <div>
+
+
+                <button class="btn btn-warning" (click)="cancel()"> Cancel</button>
+                <button [disabled]="addUserform.invalid" (click)="addUser()" class="btn btn-success ms-5"> Save</button>
+              </div>
+
+
+             
+
+
+
+
+
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>

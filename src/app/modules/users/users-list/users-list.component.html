@@ -1,0 +1,142 @@
+<div class="p-5 w-100">
+
+
+  <div class="title mt-3 d-flex justify-content-between">
+
+    <h1>Contact List</h1>
+
+    <button routerLink="add" class="btn btn-outline-warning"> <i class="fa-solid fa-user-plus"></i>Add</button>
+
+
+
+
+  </div>
+
+  <p class="mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quam rem! Officia temporibus cum
+    perspiciatis, rem excepturi eaque dolor quae nisi, dolorem nesciunt velit possimus amet a magnam, nihil earum?Lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur eaque fugiat totam dolorem ad labore nemo,
+    consequatur, voluptate iusto at id perferendis quisquam veniam exercitationem aspernatur ratione suscipit
+    laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere temporibus, cum beatae harum
+    sunt ad odit mollitia obcaecati et quisquam autem necessitatibus excepturi dolorem minus nisi laudantium suscipit
+    animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium asperiores rerum ut vero exercitationem,
+    voluptates quos tempore doloremque, consectetur perferendis eos sunt laboriosam alias adipisci quia. Officiis
+    assumenda asperiores saepe.</p>
+
+
+  <div *ngFor="let user of allusers"  class="userdiv1 mt-5  d-flex">
+    <!-- image div -->
+    <div class="userdiv2 m-5">
+
+      <img class="image" [src]="user.photo" alt="">
+
+
+
+    </div>
+
+    <!-- details -->
+
+
+    <div class="detials ">
+
+
+
+      <!-- table -->
+      <div class="container mt-5 ">
+        <div class="row">
+          <div class="col">
+            <label class="labell" for="Name"> Name :</label>
+          </div>
+          <div class="col n">
+            <h4> {{user.name}} </h4>
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="row">
+          <div class="col">
+            <label class="labell" for="Email"> Email :</label>
+          </div>
+          <div class="col n">
+            <h4>{{user.email}}</h4>
+          </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col">
+            <label class="labell" for="Mob"> Mobile :</label>
+          </div>
+          <div class="col n">
+            <h4>{{user.mobile}}</h4>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="row">
+          <div class="col">
+            <label class="labell" for="Company"> Company :</label>
+          </div>
+          <div class="col n">
+            <h4>{{user.company}}</h4>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col">
+            <label class="labell" for="Title"> Title :</label>
+          </div>
+          <div class="col n">
+            <h4> {{user.title}}</h4>
+          </div>
+
+        </div>
+
+
+        <button routerLink="edit/{{user.id}}" class="btn btn-outline-success m-3"><i class="fa-solid fa-pen"></i> Edit</button>
+
+        <button routerLink="view/{{user.id}}" class="btn btn-outline-primary"><i class="fa-solid fa-eye"></i> View </button>
+
+        <button (click)="deleteData(user.id)" class="btn btn-outline-danger m-3"><i class="fa-solid fa-trash"></i> Delete</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+</div>
+
